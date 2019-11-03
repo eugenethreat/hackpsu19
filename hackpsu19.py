@@ -29,4 +29,5 @@ if(FinalVALUE==0):
 	print("The best time for you to leave for " +str(end)+" would be now.")
 else:
 	print("The best time for you to leave for " +str(end)+" would be in "+str(FinalVALUE)+" hour"+ ("s"if FinalVALUE>1 else ""))
-print(FinalVALUE)
+	
+#print(FinalVALUE)
