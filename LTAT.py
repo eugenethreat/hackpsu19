@@ -16,6 +16,7 @@ print('\nCalculating...\n')
 
 #Using the defined start/end points, generate the best geographic route from start to end
 totalList = directionalReturn(start, end)
+print(totalList) #Print statement for all Latitudes and Longitudes
 
 '''
 	Since totalList contains full lat/lng coordinates for every turn on the route,
@@ -25,7 +26,9 @@ totalList = directionalReturn(start, end)
 '''
 for lists in range(len(totalList)):
 	answer = weather(totalList[lists][0])
+	#print(answer) #Print statement for weather info
 	severe = severity(answer)
+	#print(severe) #Print statement for severity list
 	totalList[lists][0]= severe
 
 
