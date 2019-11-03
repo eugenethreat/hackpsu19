@@ -82,9 +82,9 @@ def legsToDict(passedDict):
              travel_mode': 'DRIVING'}
         '''
         stepList.append(valuesToAdd)
-
-        print("returned, done") 
-        return stepList
+        
+    print("returned, done") 
+    return stepList
 
 #aaa
 directinonalReturn("State College, PA", "New York City, NY")
