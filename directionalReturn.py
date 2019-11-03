@@ -64,8 +64,25 @@ def legsToDict(passedDict):
         time = duration.get("text")
         
         timeSplit = time.split(" ")
-        timeMinutes = int(timeSplit[0])
-        timeHours = timeMinutes / 60 
+
+        if(timeSplit[1] == "hour"):
+            timeMinutes = int(timeSplit[2])
+            timeHours = timeMinutes / 60
+            timeHours = timeHours + 1
+            duration["text"] = timeHours 
+
+        elif(timeSplit[1] == "hours"):
+            timeMinutes = int(timeSplit[2])
+            amtOfRawHours = int(timeSplit[0])
+            timeHours = timeMinutes / 60
+            timeHours = timeHours + 1 * amtOfRawHours
+            duration["text"] = timeHours 
+
+        else:
+            timeMinutes = int(timeSplit[0])
+            timeHours = timeMinutes / 60 
+            duration["text"] = timeHours 
+
         #cleaning up output; getting rid of "Values", and converting minutes to hours. 
         '''
         more verbose: getting rid of "values", then fetching the time. Covnerting that time 
