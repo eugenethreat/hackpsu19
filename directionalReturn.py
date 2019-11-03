@@ -11,6 +11,9 @@ import pprint
 import requests
 from datetime import datetime
 
+from latLongGrabber import latLongGrabber
+from latLongGrabber import stripper
+
 '''
 this file takes an origin and destination as parameters, then 
 returns a nested list of the lat/long values, and the duration 
@@ -61,7 +64,7 @@ def legsToDict(passedDict):
     #print("lk: ",length_key)
 
     for x in range(length_key):
-        leg1 = passedDict['routes'][0]['legs'][0]['steps'][x]
+        #leg1 = passedDict['routes'][0]['legs'][0]['steps'][x]
         duration = passedDict['routes'][0]['legs'][0]['steps'][x]['duration']
         endLoc = passedDict['routes'][0]['legs'][0]['steps'][x]['end_location']
         
