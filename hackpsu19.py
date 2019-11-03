@@ -26,7 +26,7 @@ MainWaitTime = weight(totalList)
 
 FinalVALUE = MainWaitTime.index(min(MainWaitTime))
 if(FinalVALUE==0):
-	print("The best time for you to leave for " end" would be now.")
+	print("The best time for you to leave for " +end+" would be now.")
 else:
-	print("The best time for you to leave for " end" would be in "+FinalVALUE+" hour"+ ("s"if FinalVALUE>1 else ""))
+	print("The best time for you to leave for " +end+" would be in "+FinalVALUE+" hour"+ ("s"if FinalVALUE>1 else ""))
 print(FinalVALUE)
