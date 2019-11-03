@@ -1,6 +1,0 @@
-from latLongGrabber import latLongGrabber
-from latLongGrabber import stripper
-
-add = "State College, PA" 
-
-

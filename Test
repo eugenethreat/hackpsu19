@@ -1,6 +1,0 @@
-
-
-
-import requests
-response = requests.get("https://www.accuweather.com/en/us/state-college-pa/16801/weather-forecast/335315")
-print(response.status_code)
