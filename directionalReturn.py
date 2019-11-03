@@ -61,11 +61,9 @@ def legsToDict(passedDict):
         endLoc = passedDict['routes'][0]['legs'][0]['steps'][x]['end_location']
         
         duration.pop("value")
-        print(duration)
         time = duration.get("text")
         
         timeSplit = time.split(" ")
-        print(timeSplit)
 
         if(timeSplit[1] == "hour"):
             timeMinutes = int(timeSplit[2])
