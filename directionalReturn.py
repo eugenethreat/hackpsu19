@@ -38,6 +38,7 @@ def directinonalReturn(origin, destination):
     #print(routeAsJson['routes'])
     jsonAsDict = jsonToObject(routeAsJson)
     coordsAndDuration = legsToDict(jsonAsDict)
+        #this list is the one that holds the finished values! 
 
     print(coordsAndDuration)
 
