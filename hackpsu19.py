@@ -11,6 +11,9 @@ end.lstrip()
 
 totalList = directionalReturn(start, end)
 
-for list in totalList:
-	answer = weather(list[0])
+for lists in totalList:
+	answer = weather(lists[0])
+	#severe = severity(answer)
+	#totalList[lists][0]= severe
+	#print(totalList[lists])
 	print(answer)
