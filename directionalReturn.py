@@ -41,31 +41,22 @@ def directionalReturn(origin, destination):
 def jsonToObject(passedJson):
     jsonToStr = json.dumps(passedJson)
     jsonAsDict = json.loads(jsonToStr)
-    #print(type(jsonToStr))
-    #print(type(jsonAsDict))
 
     return jsonAsDict
 
 def legsToDict(passedDict):
-    #print(passedDict['routes'][0]['legs'][0]['distance']) 
-        #access the lat and long of the first value 
-    
     stepList = []
     length_key = len(passedDict['routes'][0]['legs'][0]['steps'])  # length of the list stored at `'key'` ...
     length_key = length_key 
-    #print("lk: ",length_key)
 
     for x in range(length_key):
-        #leg1 = passedDict['routes'][0]['legs'][0]['steps'][x]
         duration = passedDict['routes'][0]['legs'][0]['steps'][x]['duration']
         endLoc = passedDict['routes'][0]['legs'][0]['steps'][x]['end_location']
         
         duration.pop("value")
-        #print(duration)
         time = duration.get("text")
         
         timeSplit = time.split(" ")
-        #print(timeSplit)
 
         if(timeSplit[1] == "hour"):
             timeMinutes = int(timeSplit[2])
@@ -95,9 +86,7 @@ def legsToDict(passedDict):
         spots backwards. Each of these is just one hour, so we add one to the minutes 
         (which are divided by 60 to make them their hour-length equivalent; ex: 1 minute = 0.0166 hour.)
 
-        '''
-
-        #print(timeHours) #testing output 
+        ''' 
 
         duration["text"] = timeHours 
         
@@ -107,7 +96,6 @@ def legsToDict(passedDict):
         '''
         
         valuesToAdd = [endLoc, duration]
-        #print("vals: ",valuesToAdd) #testing output 
 
         ''' 
         21 ayaya:  {'distance': 
@@ -121,7 +109,6 @@ def legsToDict(passedDict):
              travel_mode': 'DRIVING'}
         '''
         stepList.append(valuesToAdd)
-        
-    #print("returned, done") 
+
     return stepList
   

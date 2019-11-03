@@ -1,12 +1,9 @@
-#ACCUWEATHER API KEY - jjK2n1LcGnGF7Nrouf8tD29fjVzyfxOM
+#ACCUWEATHER API KEY - HwhVP2Ks2DTHzUNDTEcBp6CGJ9HafPuJ
 
 #Import Requests Library for getting AccuWeather API data
 import requests
 #Import JSON Library for parsing the AccuWeather API data
 import json
-
-#Testing check
-#addr = "Tampa, Florida"
 
 def weather(addr):
 
