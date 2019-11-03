@@ -21,7 +21,7 @@ def stripper(location):
     return location
 
 #actual program beginning ...
-
+'''
 def latLongGrabber():
     import googlemaps
     from datetime import datetime
@@ -45,8 +45,8 @@ def latLongGrabber():
     #return location
     print('lat: ',location[0],'lng: ',location[1]) #for output purposes 
     return location
-
 '''
+
 def latLongGrabber(addr):
     #version that takes a passed argument 
     import googlemaps
@@ -62,10 +62,10 @@ def latLongGrabber(addr):
 
     location = stripper(location)
     location = location.split(',')
+
     #location holds raw lat/lng vals, as a list 
     #[40.7933949],[-77.8600012] 
     #'location': {'lat': 40.7933949, 'lng': -77.8600012}, 
-'''
+    #return location
 
- 
-
+    return location
