@@ -10,13 +10,15 @@ def weight(bigList,waitTime=3):
 
         for pathServ in bigList:
 
-            time = pathServ[1]
+            time = pathServ[1]["text"]
+            print(time)
             totalTime+=time
-
-            try:
-                currentSeverity+= pathServ[0][c+int(totalTime)]
+            
+            try: 
+                currentSeverity+= pathServ[0][c+round(totalTime)]
             except:
                 currentSeverity+= pathServ[0][-1]
 
         bigListWeights.append(currentSeverity)
     return bigListWeights
+
