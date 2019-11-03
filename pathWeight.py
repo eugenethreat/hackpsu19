@@ -9,9 +9,9 @@ def weight(bigList,waitTime=3):
         currentSeverity = 0
 
         for pathServ in bigList:
-
+            #print(pathServ)
             time = pathServ[1]["text"]
-            print(time)
+            #print(time)
             totalTime+=time
             
             try: 
