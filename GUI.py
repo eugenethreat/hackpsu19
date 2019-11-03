@@ -49,7 +49,7 @@ def clicked():
         if(waitTime==0):
             pText = ("The best time for you to leave for\n " +str(endLoc)+" would be NOW.")
         else:
-            pText = "The best time for you to leave for\n " +str(endLoc)+" would be in "+str(waitTime)+" HOUR"+ ("S"if waitTine>1 else "")
+            pText = "The best time for you to leave for\n " +str(endLoc)+" would be in "+str(waitTime)+" HOUR"+ ("S"if waitTime>1 else "")
 
         
         lblP.configure(text = pText)
