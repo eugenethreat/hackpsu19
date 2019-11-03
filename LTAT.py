@@ -11,6 +11,7 @@ start.lstrip()
 end = input('\nPlease enter the address you are traveling to: ')
 end.rstrip()
 end.lstrip()
+print('\nCalculating...\n')
 
 
 #Using the defined start/end points, generate the best geographic route from start to end
