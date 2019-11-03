@@ -1,5 +1,8 @@
 # hackpsu19
 
+RUN GUI
+
+
 
 Inspiration
 
