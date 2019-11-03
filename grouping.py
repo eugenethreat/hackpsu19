@@ -1,5 +1,5 @@
 #########################################################
-#grouping fuction to decide severity of weather
+# grouping fuction to decide severity of weather
 #
 #########################################################
 
@@ -54,7 +54,6 @@ severDict = {1:1,
             44:7}
 
 
-            
 
 def severity(weatherVal=[]):
     severityList = []

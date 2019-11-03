@@ -17,7 +17,7 @@ def main(start="",end=""):
 
 	#Using the defined start/end points, generate the best geographic route from start to end
 	totalList = directionalReturn(start, end)
-
+	print(totalList)
 	'''
 		Since totalList contains full lat/lng coordinates for every turn on the route,
 		as well as the time data for those locations, we need to look at the nested dictionaries,
@@ -27,8 +27,9 @@ def main(start="",end=""):
 	for lists in range(len(totalList)):
 		answer = weather(totalList[lists][0])
 		severe = severity(answer)
+		print(severe)
 		totalList[lists][0]= severe
-
+	print(totalList)
 
 	'''
 		Taking the severity from totalList, we then apply our own weight based
@@ -36,7 +37,7 @@ def main(start="",end=""):
 		if the user should delay or not based off the weighted value.
 	'''
 	MainWaitTime = weight(totalList)
-
+	print(MainWaitTime)
 
 	FinalVALUE = MainWaitTime.index(min(MainWaitTime))
 	if(FinalVALUE==0):
