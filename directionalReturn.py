@@ -21,7 +21,6 @@ def directionalReturn(origin, destination):
     orig = origin
     dest = destination
 
-
     '''https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=YOUR_API_KEY'''
 
     route = 'https://maps.googleapis.com/maps/api/directions/json?origin='+ orig +'&destination=' + dest + '&key=' + key
@@ -61,7 +60,25 @@ def legsToDict(passedDict):
         duration = passedDict['routes'][0]['legs'][0]['steps'][x]['duration']
         endLoc = passedDict['routes'][0]['legs'][0]['steps'][x]['end_location']
         
+        duration.pop("value")
+        time = duration.get("text")
+        
+        timeSplit = time.split(" ")
+        timeMinutes = int(timeSplit[0])
+        timeHours = timeMinutes / 60 
+        #cleaning up output; getting rid of "Values", and converting minutes to hours. 
+
+        #print(timeHours) #testing output 
+
+        duration["text"] = timeHours 
+        
+        '''
+        {'text': '1 min', 'value': 7}
+
+        '''
+        
         valuesToAdd = [endLoc, duration]
+        #print("vals: ",valuesToAdd) #testing output 
 
         ''' 
         21 ayaya:  {'distance': 
