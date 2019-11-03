@@ -36,7 +36,7 @@ def directionalReturn(origin, destination):
     coordsAndDuration = legsToDict(jsonAsDict)
         #this list is the one that holds the finished values! 
 
-    print(coordsAndDuration)
+    return(coordsAndDuration)
 
 
 def jsonToObject(passedJson):
