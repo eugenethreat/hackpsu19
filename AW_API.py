@@ -1,4 +1,4 @@
-#ACCUWEATHER API KEY - 5u1ZRpMU9yQ2urfUL5cU1a3N2fFw3zAU
+#ACCUWEATHER API KEY - jjK2n1LcGnGF7Nrouf8tD29fjVzyfxOM
 
 #Import Requests Library for getting AccuWeather API data
 import requests
@@ -20,7 +20,7 @@ def weather(addr):
 	lng = location['lng']
 
 
-	aw_geosite = 'http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=5u1ZRpMU9yQ2urfUL5cU1a3N2fFw3zAU&q='+ str(lat) + '%2C%20' + str(lng)
+	aw_geosite = 'http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=jjK2n1LcGnGF7Nrouf8tD29fjVzyfxOM&q='+ str(lat) + '%2C%20' + str(lng)
 	response = requests.get(aw_geosite)
 
 	f = response.json()
@@ -30,7 +30,7 @@ def weather(addr):
 		assigning g to be the API output in .json format
 	'''
 
-	aw_12hour = requests.get('http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/' +str(locKey) + '?apikey=5u1ZRpMU9yQ2urfUL5cU1a3N2fFw3zAU')
+	aw_12hour = requests.get('http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/' +str(locKey) + '?apikey=jjK2n1LcGnGF7Nrouf8tD29fjVzyfxOM')
 
 	g = aw_12hour.json()
 	weather_icon = []
