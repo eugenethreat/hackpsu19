@@ -5,11 +5,6 @@ import requests
 #Import JSON Library for parsing the AccuWeather API data
 import json
 
-
-#Bring over the stripper and latLongGrabber functions from latLongGrabber.py
-from latLongGrabber import latLongGrabber
-from latLongGrabber import stripper
-
 #Testing check
 #addr = "Tampa, Florida"
 

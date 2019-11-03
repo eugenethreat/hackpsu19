@@ -1,7 +1,4 @@
-#GOOGLE API KEY - AIzaSyBjkt7bJVDGfg0eInZv4lTOMx6NCxTBVgs
-#ACCUWEATHER API KEY - 5u1ZRpMU9yQ2urfUL5cU1a3N2fFw3zAU
-
-#USE THIS FILE 
+#GOOGLE API KEY - AIzaSyBjkt7bJVDGfg0eInZv4lTOMx6NCxTBVgs 
 
 global location
 
@@ -11,23 +8,19 @@ import pprint
 import requests
 from datetime import datetime
 
-from latLongGrabber import latLongGrabber
-from latLongGrabber import stripper
-
 '''
 this file takes an origin and destination as parameters, then 
 returns a nested list of the lat/long values, and the duration 
 of each step. 
 
 '''
-def directinonalReturn(origin, destination):
+def directionalReturn(origin, destination):
     key = 'AIzaSyBjkt7bJVDGfg0eInZv4lTOMx6NCxTBVgs'
     gmaps = googlemaps.Client(key=key)
 
-    orig = "State"+"College"+"PA"
-    dest = "New"+"York"+"City"+"NY"
+    orig = origin
+    dest = destination
 
-    #mapped = gmaps.directions(orig, dest) shit library
 
     '''https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=YOUR_API_KEY'''
 
@@ -38,7 +31,7 @@ def directinonalReturn(origin, destination):
     '''the route info is contained in the param 'legs' ''' 
     routeAsJson = response.json() #a dictionary of key 
 
-    #print(routeAsJson['routes'])
+
     jsonAsDict = jsonToObject(routeAsJson)
     coordsAndDuration = legsToDict(jsonAsDict)
         #this list is the one that holds the finished values! 
@@ -85,7 +78,4 @@ def legsToDict(passedDict):
         
     print("returned, done") 
     return stepList
-
-#aaa
-directinonalReturn("State College, PA", "New York City, NY")
   
