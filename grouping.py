@@ -5,7 +5,7 @@
 
 #########################################################
 #https://developer.accuweather.com/weather-icons
-#1 = sunny, good travel
+#1 = clear, good travel
 #2 = overcast still good
 #3 = fog, rain with sun
 #5 = thunderstorm,heavy rain,
