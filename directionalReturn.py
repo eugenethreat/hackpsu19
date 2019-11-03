@@ -67,6 +67,10 @@ def legsToDict(passedDict):
         timeMinutes = int(timeSplit[0])
         timeHours = timeMinutes / 60 
         #cleaning up output; getting rid of "Values", and converting minutes to hours. 
+        '''
+        more verbose: getting rid of "values", then fetching the time. Covnerting that time 
+        to fractional hours, then setting the value to time as the new value.  
+        '''
 
         #print(timeHours) #testing output 
 
