@@ -86,9 +86,15 @@ def legsToDict(passedDict):
             duration["text"] = timeHours 
 
         #cleaning up output; getting rid of "Values", and converting minutes to hours. 
-        '''
+        '''        
         more verbose: getting rid of "values", then fetching the time. Covnerting that time 
         to fractional hours, then setting the value to time as the new value.  
+
+        in the hour blocks, timeMinutes = timeSplit[2] since the addition of the hour adds 
+        two more values to the list; henceforth, the original minute values are bumped two
+        spots backwards. Each of these is just one hour, so we add one to the minutes 
+        (which are divided by 60 to make them their hour-length equivalent; ex: 1 minute = 0.0166 hour.)
+
         '''
 
         #print(timeHours) #testing output 
