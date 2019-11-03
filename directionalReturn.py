@@ -11,6 +11,12 @@ import pprint
 import requests
 from datetime import datetime
 
+'''
+this file takes an origin and destination as parameters, then 
+returns a nested list of the lat/long values, and the duration 
+of each step. 
+
+'''
 def directinonalReturn(origin, destination):
     key = 'AIzaSyBjkt7bJVDGfg0eInZv4lTOMx6NCxTBVgs'
     gmaps = googlemaps.Client(key=key)
